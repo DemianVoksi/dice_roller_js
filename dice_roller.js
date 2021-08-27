@@ -37,3 +37,19 @@ function getArray(limit) {
   while (diceArray.push(i++) < limit);
   return diceArray;
 }
+
+function rollAgain() {
+  /* Gives option to roll again. 
+  Calls on ... */
+  while(true) {
+    let question = prompt("Roll again, 'y' or 'n'? ");
+    if (question == 'n') {
+      alert("Ok, we're done.");
+      break
+    } else if (question == 'y') {
+      alert("Let's go again!"); // add function to roll again
+    } else {
+      continue
+    }
+  }
+}
