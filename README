@@ -1,0 +1,5 @@
+A Javascript implementation of the Python d20 dice roller script
+available here: https://github.com/DemianVoksi/d20_dice_roller
+
+For now only in JS, however I plan on using it as a basis for building a
+small website. 

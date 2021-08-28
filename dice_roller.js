@@ -38,9 +38,24 @@ function getArray(limit) {
   return diceArray;
 }
 
+function doRoll() {
+  /* Calls on getArray() to create an array of the times needed to
+  roll the dice. Appends the results of a roll into the results array
+  nd returns them. */
+  
+  let diceArr = getArray(howManyDice());
+  let results = [];
+  diceArr.forEach(function(i) {
+    results.push(oneRoll(whichDie()));
+  });
+  return results
+}
+
 function rollAgain() {
-  /* Gives option to roll again. 
-  Calls on ... */
+  /* Initiates the roll procedure and 
+  gives option to roll again. 
+  Calls on doRoll() */
+  
   alert(doRoll())
   while(true) {
     let question = prompt("Roll again, 'y' or 'n'? ");
@@ -54,15 +69,6 @@ function rollAgain() {
       continue
     }
   }
-}
-
-function doRoll() {
-  let diceArr = getArray(howManyDice());
-  let results = [];
-  diceArr.forEach(function(i) {
-    results.push(oneRoll(whichDie()));
-  });
-  return results
 }
 
 console.log(rollAgain())
