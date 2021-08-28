@@ -41,6 +41,7 @@ function getArray(limit) {
 function rollAgain() {
   /* Gives option to roll again. 
   Calls on ... */
+  alert(doRoll())
   while(true) {
     let question = prompt("Roll again, 'y' or 'n'? ");
     if (question == 'n') {
@@ -48,8 +49,20 @@ function rollAgain() {
       break
     } else if (question == 'y') {
       alert("Let's go again!"); // add function to roll again
+      alert(doRoll())
     } else {
       continue
     }
   }
 }
+
+function doRoll() {
+  let diceArr = getArray(howManyDice());
+  let results = [];
+  diceArr.forEach(function(i) {
+    results.push(oneRoll(whichDie()));
+  });
+  return results
+}
+
+console.log(rollAgain())
