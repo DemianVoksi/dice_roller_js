@@ -63,7 +63,7 @@ function rollAgain() {
       alert("Ok, we're done.");
       break
     } else if (question == 'y') {
-      alert("Let's go again!"); // add function to roll again
+      alert("Let's go again!");
       alert(doRoll())
     } else {
       continue
